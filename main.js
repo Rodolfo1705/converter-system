@@ -1,7 +1,8 @@
 const buttons = document.querySelectorAll('header button')
 
+buttons[0].classList.add('selected')
+
 buttons.forEach((button) => {
-    buttons[0].classList.add('selected')
     button.onclick = () => {
         document.querySelector('.selected')?.classList.remove('selected')
         button.classList.add('selected')
