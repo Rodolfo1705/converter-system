@@ -7,26 +7,78 @@
         <script src="./length/main.js" defer></script>
         <script src="./temperature/main.js" defer></script>
         <script src="./weight/main.js" defer></script>
+        <script src="./main.js" defer></script>
         <link rel="stylesheet" href="style.css" />
+        <!--<script src="https://cdn.tailwindcss.com"></script> -->
         <title>Conversor de medidas</title>
     </head>
+
     <body>
         <header>
-            <img src="./img/balance.png" alt="weigth" />
-            <img src="./img/ruler.png" alt="length" />
-            <img src="./img/thermometer.png" alt="temperature" />
+            <button><img src="./img/balance.png" alt="weigth" /></button>
+            <button><img src="./img/ruler.png" alt="length" /></button>
+            <button><img src="./img/thermometer.png" alt="temperature" /></button>
         </header>
         <div class="length-converter">
+            <h1>Length</h1>
+            <select class="enter-unity">
+                <option value="1">Milimeter</option>
+                <option value="2">Centimeter</option>
+                <option value="3">Decimeter</option>
+                <option value="4">Meter</option>
+                <option value="5">Decameter</option>
+                <option value="6">Hectometer</option>
+                <option value="7">Kilometer</option>
+            </select>
             <input type="text" class="enter-value" />
-            <input type="text" class="output-value" />
+            <select class="output-unity">
+                <option value="1">Milimeter</option>
+                <option value="2">Centimeter</option>
+                <option value="3">Decimeter</option>
+                <option value="4">Meter</option>
+                <option value="5">Decameter</option>
+                <option value="6">Hectometer</option>
+                <option value="7">Kilometer</option>
+            </select>
+            <input type="text" class="output-value" readonly />
         </div>
         <div class="temperature-converter">
+            <h1>Temperature</h1>
+            <select class="enter-unity">
+                <option value="1">Celsius</option>
+                <option value="2">Fahrenheit</option>
+                <option value="3">Kelvin</option>
+            </select>
             <input type="text" class="enter-value" />
-            <input type="text" class="output-value" />
+            <select class="output-unity">
+                <option value="1">Celsius</option>
+                <option value="2">Fahrenheit</option>
+                <option value="3">Kelvin</option>
+            </select>
+            <input type="text" class="output-value" readonly />
         </div>
         <div class="weight-converter">
+            <h1>Weight</h1>
+            <select class="enter-unity">
+                <option value="1">Miligram</option>
+                <option value="2">Centigram</option>
+                <option value="3">Decigram</option>
+                <option value="4">Gram</option>
+                <option value="5">Decagram</option>
+                <option value="6">Hectogram</option>
+                <option value="7">Kilogram</option>
+            </select>
             <input type="text" class="enter-value" />
-            <input type="text" class="output-value" />
+            <select class="output-unity">
+                <option value="1">Miligram</option>
+                <option value="2">Centigram</option>
+                <option value="3">Decigram</option>
+                <option value="4">Gram</option>
+                <option value="5">Decagram</option>
+                <option value="6">Hectogram</option>
+                <option value="7">Kilogram</option>
+            </select>
+            <input type="text" class="output-value" readonly />
         </div>
     </body>
 </html>

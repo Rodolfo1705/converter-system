@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+img {
+    width: 100px;
+}
+
+div {
+    position: absolute;
+    background-color: white;
+    top: 130px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input {
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+button:hover {
+    background-color: rgb(185, 183, 183);
+}
+
+button.selected {
+    background-color: rgb(101, 103, 105);
+    color: white;
+}
+
+.show {
+    z-index: 1;
+}

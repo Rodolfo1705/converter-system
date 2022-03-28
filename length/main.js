@@ -1,35 +1,20 @@
-function convertKilometersToMeters(lengthInKilometres) {
-    const lengthInMeters = lengthInKilometres * 1000
+const lengthInputSelect = document.querySelector('div.length-converter select.enter-unity')
+const lengthOutputSelect = document.querySelector('div.length-converter select.output-unity')
+const lengthEnterValueInput = document.querySelector('div.length-converter input.enter-value')
+const lengthOutputValueInput = document.querySelector('div.length-converter input.output-value')
 
-    return lengthInMeters
+function convertLength(value) {
+    const power = Math.pow(10, Math.abs(+lengthOutputSelect.value - +lengthInputSelect.value))
+
+    if (+lengthOutputSelect.value > +lengthInputSelect.value) return value / power
+    else if (+lengthOutputSelect.value < +lengthInputSelect.value) return value * power
+
+    return value
 }
 
-function convertMetersToKilometers(lengthInMeters) {
-    const lengthInKilometres = lengthInMeters / 1000
-
-    return lengthInKilometres
+lengthInputSelect.onchange = () => {
+    lengthOutputValueInput.value = convertLength(lengthEnterValueInput.value)
 }
 
-function convertCentimetersToMeters(lengthInCentimeters) {
-    const lengthInMeters = lengthInCentimeters * 100
-
-    return lengthInMeters
-}
-
-function convertMetersToCentimeters(lengthInMeters) {
-    const lengthInCentimeters = lengthInMeters / 100
-
-    return lengthInCentimeters
-}
-
-function convertKilometersToCentimeters(lengthInKilometers) {
-    const lengthInCentimeters = lengthInKilometers / 100000
-
-    return lengthInCentimeters
-}
-
-function convertCentimetersToKilometers(lengthInCentimeters) {
-    const lengthInKilometres = lengthInCentimeters * 100000
-
-    return lengthInKilometres
-}
+lengthEnterValueInput.oninput = lengthInputSelect.onchange
+lengthOutputSelect.onchange = lengthInputSelect.onchange
